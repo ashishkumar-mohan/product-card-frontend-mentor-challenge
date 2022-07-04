@@ -1,0 +1,237 @@
+/*            Modern CSS Reset           */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Variable Declarations */
+:root {
+  /*   Colorgraphy related Rules  */
+
+  --p-dark-cyan: hsl(158, 36%, 37%);
+  --p-cream: hsl(30, 38%, 92%);
+  --s-vd-blue: hsl(212, 21%, 14%);
+  --s-dg-blue: hsl(228, 12%, 48%);
+  --s-white: hsl(0, 0%, 100%);
+
+  /*   Typography Related Rules   */
+
+  --main-font: "Fraunces", serif;
+  --body-font: "Montserrat", sans-serif;
+  --body-font-size: 14px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  width: 600px;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-image {
+  width: 300px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  width: 300px;
+  height: 100%;
+  content: url("../images/image-product-desktop.jpg");
+  object-fit: contain;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card-body {
+  width: 300px;
+  height: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.price-container span {
+  display: inline;
+  margin: 10px;
+}
+
+.card-button {
+  height: 42px;
+  width: 235px;
+}
+
+.card-button button {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  text-align: center;
+}
+
+#icon-cart{
+    background: url('../images/icon-cart.svg') no-repeat bottom left;
+    height: 16px;
+    width: 16px;
+    margin: 0px 5px;
+    padding: 2px;
+    display: inline-block;
+    cursor: pointer;
+    background-size: contain;
+}
+/*   Typography Related Rules   */
+.content {
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+}
+
+.subtitle-text {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.heading {
+  font-family: var(--main-font);
+}
+
+#title {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.content button {
+  font-weight: 700;
+}
+
+.price-container span {
+  text-align: center;
+}
+#retail-price {
+  text-decoration: line-through;
+}
+
+#offer-price {
+  font-family: var(--main-font);
+  font-size: 30px;
+  font-weight: 700px;
+}
+
+/* Colorography*/
+body {
+  background: var(--p-cream);
+}
+.card-body {
+  background-color: var(--s-white);
+}
+.content {
+  color: var(--s-dg-blue);
+}
+.heading {
+  color: var(--s-vd-blue);
+}
+#offer-price {
+  color: var(--p-dark-cyan);
+}
+/* Credits related styles provides by Frontend Mentor */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card-button button {
+  color: var(--s-white);
+  background-color: var(--p-dark-cyan);
+  box-shadow: none;
+  border:none;
+  border-radius: 10px;
+}
